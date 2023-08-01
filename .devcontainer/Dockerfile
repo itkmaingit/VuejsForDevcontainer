@@ -3,7 +3,7 @@ RUN apt update && \
     apt install -y git build-essential cmake clang libssl-dev less man-db sudo
 
 ARG USERNAME=node
-RUN RUN useradd -m $USERNAME && \
+RUN useradd -m $USERNAME && \
     echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME && \
     chmod 0440 /etc/sudoers.d/$USERNAME
 
